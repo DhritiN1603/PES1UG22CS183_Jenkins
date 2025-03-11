@@ -18,13 +18,13 @@ pipeline {
 
         stage('Test') {
             steps {
-                sh './output'
+                sh './PES1UG22CS183-1'
             }
         }
 
         stage('Deploy') {
             steps {
-                echo 'deploy' 
+                echo 'deploying the application' 
             }
         }
     }
