@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 script {
-                    sh 'g++ -o PES1UG22CS183-1 main/new_added.cpp' // Compiles C++ file
+                    sh 'g++ -o PES1UG22CS183-1 main/new_added.cpp' 
                 }
             }
         }
@@ -13,7 +13,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                    sh './PES1UG22CS183-1' // Runs the compiled file
+                    sh './PES1UG22CS183-1'
                 }
             }
         }
@@ -27,7 +27,7 @@ pipeline {
     
     post {
         failure {
-            echo 'Pipeline failed' // Post action in case of failure
+            echo 'Pipeline failed' 
         }
     }
 }
